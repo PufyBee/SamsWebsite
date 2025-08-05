@@ -1,18 +1,38 @@
 // pages/projects.js
 import Navbar from '../components/Navbar';
+import Image from 'next/image';
 import styles from '../styles/Projects.module.css';
 
 const projects = [
   {
     title: 'ShadeLight Website',
-    description: 'The live site for ShadeLight (static HTML/CSS/JS)',
-    url: 'https://pufybee.github.io/ShadelightSite/'
+    description:
+      'Static site showcasing frontend & backend repos, with a downloadable executable.',
+    url: 'https://pufybee.github.io/ShadelightSite/',
+    thumb: 'https://via.placeholder.com/320x180?text=ShadeLight+Site',
   },
   {
     title: 'ShadeLight Electron',
-    description: 'Electron application for dynamic theming',
-    url: 'https://github.com/PufyBee/Shadelight-electron'
-  }
+    description:
+      'Electron app with port-scanning and malware-scanning capabilities.',
+    url: 'https://github.com/PufyBee/Shadelight-electron',
+    thumb: 'https://via.placeholder.com/320x180?text=ShadeLight+App',
+  },
+  {
+    title: `Grandfather's Campaign Site`,
+    description: 'A simple “Coming Soon” campaign site for my grandfather.',
+    url: '#',
+    thumb: 'https://via.placeholder.com/320x180?text=Campaign+Site',
+    comingSoon: true,
+  },
+  {
+    title: 'CyberMonitor (Placeholder)',
+    description:
+      'Network intrusion detection & logging dashboard (coming soon).',
+    url: '#',
+    thumb: 'https://via.placeholder.com/320x180?text=CyberMonitor',
+    comingSoon: true,
+  },
 ];
 
 export default function Projects() {
@@ -24,10 +44,20 @@ export default function Projects() {
           <a
             key={p.title}
             href={p.url}
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
+            className={`${styles.card} ${p.comingSoon ? styles.soon : ''}`}
+            target={p.comingSoon ? '_self' : '_blank'}
+            rel={p.comingSoon ? undefined : 'noopener noreferrer'}
           >
+            <div className={styles.thumb}>
+              <Image
+                src={p.thumb}
+                width={320}
+                height={180}
+                alt={p.title}
+                className={styles.image}
+              />
+              {p.comingSoon && <span className={styles.badge}>Coming Soon</span>}
+            </div>
             <h2>{p.title}</h2>
             <p>{p.description}</p>
           </a>

@@ -1,7 +1,15 @@
+// pages/index.js
 export default function Home() {
   return (
-    <main className="flex items-center justify-center h-screen bg-gray-50">
-      <h1 className="text-4xl font-bold">Hello, Sam’s Website!</h1>
+    <main style={{
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      height: '100vh',
+      margin: 0,
+      fontFamily: 'system-ui, sans-serif'
+    }}>
+      <h1>Hello, Sam’s Website!</h1>
     </main>
-  )
+  );
 }

@@ -1,0 +1,16 @@
+.nav {
+  background: #333;
+  padding: 1rem;
+}
+.list {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+.list a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}

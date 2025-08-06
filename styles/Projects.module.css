@@ -1,4 +1,5 @@
 /* styles/Projects.module.css */
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -13,13 +14,18 @@
   border-radius: 1rem;
   box-shadow: 0 8px 20px var(--card-shadow);
   text-decoration: none;
-  transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.2s ease;
+  transition: 
+    background 0.3s, 
+    color 0.3s, 
+    box-shadow 0.3s, 
+    transform 0.2s ease;
 }
 
 .card:hover {
   box-shadow: 0 12px 30px rgba(0, 112, 243, 0.3);
 }
 
+/* Thumbnail wrapper unchanged */
 .thumb {
   position: relative;
   margin-bottom: 1rem;
@@ -28,8 +34,7 @@
 .imageWrapper {
   position: relative;
   width: 100%;
-  /* 16:9 aspect ratio */
-  padding-top: 56.25%;
+  padding-top: 56.25%; /* 16:9 */
   border-radius: 0.75rem;
   overflow: hidden;
 }
@@ -49,11 +54,12 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
+  /* inherits var(--card-fg) */
 }
 
 .desc {
   font-size: 0.95rem;
-  color: #555;
+  color: var(--card-fg);  /* was #555, now follows theme */
   margin-bottom: 0.5rem;
 }
 

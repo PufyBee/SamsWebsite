@@ -8,6 +8,7 @@ import styles from './AboutMe.module.css';
 import {
   SiPython,
   SiArm,
+  SiJavascript,
   SiCplusplus,
   SiTailwindcss,
 } from 'react-icons/si';
@@ -17,6 +18,7 @@ import { FaWalking, FaDumbbell, FaGamepad } from 'react-icons/fa';
 export default function AboutMe() {
   const techStack = [
     { name: 'Python',       Icon: SiPython,       color: '#3776AB', proficiency: 90 },
+    { name: 'Javascript',   Icon: SiJavascript,   color: '#F7DF1E', proficiency: 85 },                         
     { name: 'ARM Assembly', Icon: SiArm,          color: '#DD0031', proficiency: 70 },
     { name: 'C++',          Icon: SiCplusplus,    color: '#00599C', proficiency: 80 },
     { name: 'Tailwind CSS', Icon: SiTailwindcss,  color: '#06B6D4', proficiency: 85 },

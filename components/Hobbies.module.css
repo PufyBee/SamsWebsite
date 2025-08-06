@@ -1,19 +1,20 @@
 /* components/Hobbies.module.css */
+
 .grid {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;   /* stack vertically */
+  align-items: center;      /* center each item */
   gap: 1rem;
   margin-top: 0.5rem;
 }
 
 .item {
-  text-align: center;
-  font-size: 0.875rem;
-  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .item span {
-  display: block;
-  margin-top: 0.25rem;
+  font-size: 0.9rem;
+  color: #333;
 }

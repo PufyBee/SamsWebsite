@@ -12,6 +12,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
+        whileHover={{ scale: 1.03 }}       // ← add this
       >
         <div className={styles.avatar}>
           <Image
@@ -41,7 +42,6 @@ export default function Hero() {
         </motion.p>
 
         <div className={styles.ctaGroup}>
-          {/* Link to /projects */}
           <Link href="/projects" passHref>
             <motion.a
               className={styles.cta}
@@ -54,7 +54,6 @@ export default function Hero() {
               View My Projects
             </motion.a>
           </Link>
-
           <motion.a
             href="/resume.pdf"
             download

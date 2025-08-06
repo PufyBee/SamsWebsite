@@ -16,6 +16,12 @@
   text-align: center;
   max-width: 400px;
   width: 100%;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;  /* add this */
+}
+
+/* glow on hover */
+.card:hover {
+  box-shadow: 0 12px 30px rgba(0, 112, 243, 0.3);
 }
 
 .avatar {
@@ -33,7 +39,7 @@
 }
 
 .title {
-  margin-top: 3rem; /* pushes text below the avatar */
+  margin-top: 3rem;
   font-size: 1.75rem;
   font-weight: bold;
 }

@@ -10,6 +10,7 @@ const projects = [
       'Static site showcasing frontend & backend repos, with a downloadable executable.',
     url: 'https://pufybee.github.io/ShadelightSite/',
     thumb: '/images/shadelight-site.png',
+    thumbSize: { width: 320, height: 600 },
   },
   {
     title: 'ShadeLight Electron',
@@ -17,6 +18,7 @@ const projects = [
       'Electron app with port-scanning and malware-scanning capabilities.',
     url: 'https://github.com/PufyBee/Shadelight-electron',
     thumb: '/images/shadelight-app.png',
+    thumbSize: { width: 320, height: 180 },
   },
   {
     title: `Grandfather's Campaign Site`,
@@ -49,15 +51,14 @@ export default function Projects() {
             rel={p.comingSoon ? undefined : 'noopener noreferrer'}
           >
             <div className={styles.thumb}>
-              <div className={styles.imageWrapper}>
-                <Image
-                  src={p.thumb}
-                  alt={p.title}
-                  fill
-                  style={{ objectFit: 'contain', objectPosition: 'center' }}
-                  priority={idx === 0}
-                />
-              </div>
+              <Image
+                src={p.thumb}
+                alt={p.title}
+                width={p.thumbSize?.width}
+                height={p.thumbSize?.height}
+                style={{ objectFit: 'cover' }}
+                priority={idx === 0}
+              />
               {p.comingSoon && <span className={styles.badge}>Coming Soon</span>}
             </div>
             <h2>{p.title}</h2>

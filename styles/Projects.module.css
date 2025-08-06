@@ -23,15 +23,7 @@
 .thumb {
   position: relative;
   width: 100%;
-  height: 180px;      /* fixed height for thumbnails */
-  background: #f0f0f0; /* grey behind images */
-  overflow: hidden;
-}
-
-.imageWrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
+  background: #f0f0f0;
 }
 
 .badge {

@@ -20,6 +20,7 @@ export default function Hero() {
             alt="Sam Harrison"
           />
         </div>
+
         <motion.h1
           className={styles.title}
           initial={{ scale: 0.8, opacity: 0 }}
@@ -28,6 +29,7 @@ export default function Hero() {
         >
           Sam Harrison
         </motion.h1>
+
         <motion.p
           className={styles.subtitle}
           initial={{ opacity: 0 }}
@@ -36,17 +38,34 @@ export default function Hero() {
         >
           CS Student · Cybersecurity Enthusiast · Full-Stack Developer
         </motion.p>
-        <motion.a
-          href="/projects"
-          className={styles.cta}
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 1.2, duration: 0.4 }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          View My Projects
-        </motion.a>
+
+        {/* CTA group with two buttons */}
+        <div className={styles.ctaGroup}>
+          <motion.a
+            href="/projects"
+            className={styles.cta}
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 1.2, duration: 0.4 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            View My Projects
+          </motion.a>
+
+          <motion.a
+            href="/resume.pdf"
+            download
+            className={styles.cta}
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 1.4, duration: 0.4 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Download My Resume
+          </motion.a>
+        </div>
       </motion.div>
     </section>
   );

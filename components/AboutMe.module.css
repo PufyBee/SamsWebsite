@@ -94,3 +94,13 @@
   width: 1em;
   margin-left: -1em;
 }
+
+.card {
+  /* ensure transform & shadow transitions are smooth */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* glow on hover to match Projects */
+.card:hover {
+  box-shadow: 0 12px 30px rgba(0, 112, 243, 0.3);
+}

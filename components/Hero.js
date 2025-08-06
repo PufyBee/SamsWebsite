@@ -1,5 +1,6 @@
 // components/Hero.js
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Hero.module.css';
 
@@ -40,17 +41,19 @@ export default function Hero() {
         </motion.p>
 
         <div className={styles.ctaGroup}>
-          <motion.a
-            href="#projects"
-            className={styles.cta}
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ delay: 1.2, duration: 0.4 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            View My Projects
-          </motion.a>
+          {/* Link to /projects */}
+          <Link href="/projects" passHref>
+            <motion.a
+              className={styles.cta}
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ delay: 1.2, duration: 0.4 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              View My Projects
+            </motion.a>
+          </Link>
 
           <motion.a
             href="/resume.pdf"

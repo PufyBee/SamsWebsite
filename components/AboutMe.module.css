@@ -1,0 +1,82 @@
+/* components/AboutMe.module.css */
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 1rem;
+}
+
+.card {
+  max-width: 600px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.bio {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.buttons {
+  margin-bottom: 1rem;
+}
+
+.button {
+  display: inline-block;
+  background-color: #0070f3;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  box-shadow: 0 5px 15px rgba(0, 112, 243, 0.3);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.button:hover {
+  box-shadow: 0 8px 25px rgba(0, 112, 243, 0.5);
+  transform: translateY(-2px);
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.links a {
+  color: #0070f3;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.lists {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+.listHeading {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.lists ul {
+  list-style: disc inside;
+  text-align: left;
+  padding: 0;
+}
+
+.lists li {
+  margin-bottom: 0.3rem;
+}

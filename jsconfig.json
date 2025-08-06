@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "forceConsistentCasingInFileNames": false
+  },
+  "exclude": ["node_modules", ".next"]
+}

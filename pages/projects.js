@@ -1,6 +1,7 @@
 // pages/projects.js
 import Navbar from '../components/Navbar';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import styles from '../styles/Projects.module.css';
 
 const projects = [
@@ -43,12 +44,19 @@ export default function Projects() {
       <Navbar />
       <main className={styles.grid}>
         {projects.map((p, idx) => (
-          <a
+          <motion.a
             key={p.title}
             href={p.url}
-            className={`${styles.card} ${p.comingSoon ? styles.soon : ''}`}
+            className={`${styles.card} ${
+              p.comingSoon ? styles.soon : ''
+            }`}
             target={p.comingSoon ? '_self' : '_blank'}
             rel={p.comingSoon ? undefined : 'noopener noreferrer'}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: idx * 0.1, duration: 0.5 }}
+            whileHover={{ scale: 1.03 }}
           >
             <div className={styles.thumb}>
               <Image
@@ -59,11 +67,13 @@ export default function Projects() {
                 style={{ objectFit: 'cover' }}
                 priority={idx === 0}
               />
-              {p.comingSoon && <span className={styles.badge}>Coming Soon</span>}
+              {p.comingSoon && (
+                <span className={styles.badge}>Coming Soon</span>
+              )}
             </div>
-            <h2>{p.title}</h2>
-            <p>{p.description}</p>
-          </a>
+            <h2 className={styles.title}>{p.title}</h2>
+            <p className={styles.desc}>{p.description}</p>
+          </motion.a>
         ))}
       </main>
     </>

@@ -1,8 +1,16 @@
 // components/AboutMe.js
 import { motion } from 'framer-motion';
+import Skills from './Skills';
 import styles from './AboutMe.module.css';
 
 export default function AboutMe() {
+  const techStack = [
+    { name: 'Python',       logo: '/logos/python.svg',   proficiency: 90 },
+    { name: 'ARM Assembly', logo: '/logos/arm.svg',      proficiency: 70 },
+    { name: 'C++',          logo: '/logos/cpp.svg',      proficiency: 80 },
+    { name: 'Tailwind CSS', logo: '/logos/tailwind.svg', proficiency: 85 },
+  ];
+
   return (
     <section className={styles.container} id="about">
       <motion.div
@@ -11,6 +19,7 @@ export default function AboutMe() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
+        whileHover={{ rotateX: 5, rotateY: -5, scale: 1.02 }}
       >
         <h2 className={styles.heading}>About Me</h2>
 
@@ -44,16 +53,11 @@ export default function AboutMe() {
         <div className={styles.lists}>
           <div>
             <h3 className={styles.listHeading}>Technical Skills</h3>
-            <ul>
-              <li>Python</li>
-              <li>ARM Assembly</li>
-              <li>C++</li>
-              <li>Tailwind CSS</li>
-            </ul>
+            <Skills tech={techStack} />
           </div>
           <div>
             <h3 className={styles.listHeading}>Hobbies &amp; Interests</h3>
-            <ul>
+            <ul className={styles.hobbyList}>
               <li>Playing tennis</li>
               <li>Walking</li>
               <li>Lifting weights</li>

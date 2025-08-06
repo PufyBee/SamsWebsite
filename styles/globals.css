@@ -1,7 +1,33 @@
-/* styles/globals.css */
-html, body {
-  margin: 0;
-  padding: 0;
-  font-family: system-ui, sans-serif;
-  background-color: #f4f4f4;  /* Uniform light grey background */
+:root {
+  /* Light mode colors */
+  --bg: #f0f2f5;
+  --fg: #111;
+  --card-bg: #fff;
+  --link: #0070f3;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] {
+  /* Dark mode overrides */
+  --bg: #1a1a1a;
+  --fg: #eee;
+  --card-bg: #2a2a2a;
+  --link: #4ea8de;
+  --card-shadow: rgba(0, 0, 0, 0.5);
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  transition: background 0.3s, color 0.3s;
+}
+
+.card {
+  background: var(--card-bg);
+  box-shadow: 0 10px 25px var(--card-shadow);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+a {
+  color: var(--link);
 }

@@ -1,36 +1,7 @@
 /* styles/globals.css */
-
-/* 1. Define your gradient colors */
-:root {
-  --g1: #89fffd;
-  --g2: #97efff;
-  --g3: #e1bfff;
-  --g4: #f667eb;
-}
-
-/* 2. Apply the animated gradient to the <body> */
-body {
+html, body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(
-    270deg,
-    var(--g1),
-    var(--g2),
-    var(--g3),
-    var(--g4)
-  );
-  background-size: 800% 800%;
-  animation: gradientBG 20s ease infinite;
-}
-
-/* 3. Keyframes that scroll the gradient */
-@keyframes gradientBG {
-  0%   { background-position:   0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position:   0% 50%; }
-}
-
-/* (Optional) Make sure your cards stay white/opaque */
-.card {
-  background: var(--card-bg, #fff);
+  font-family: system-ui, sans-serif;
+  background-color: #f4f4f4;  /* Uniform light grey background */
 }

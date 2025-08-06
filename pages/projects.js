@@ -9,14 +9,14 @@ const projects = [
     description:
       'Static site showcasing frontend & backend repos, with a downloadable executable.',
     url: 'https://pufybee.github.io/ShadelightSite/',
-    thumb: 'https://via.placeholder.com/320x180?text=ShadeLight+Site',
+    thumb: '/images/shadelight-site.png',
   },
   {
     title: 'ShadeLight Electron',
     description:
       'Electron app with port-scanning and malware-scanning capabilities.',
     url: 'https://github.com/PufyBee/Shadelight-electron',
-    thumb: 'https://via.placeholder.com/320x180?text=ShadeLight+App',
+    thumb: '/images/shadelight-app.png',
   },
   {
     title: `Grandfather's Campaign Site`,

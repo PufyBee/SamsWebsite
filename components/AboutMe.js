@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import Skills from './Skills';
 import Hobbies from './Hobbies';
+import Certifications from './Certifications';
 import styles from './AboutMe.module.css';
 
 // react-icons imports
@@ -18,7 +19,7 @@ import { FaWalking, FaDumbbell, FaGamepad } from 'react-icons/fa';
 export default function AboutMe() {
   const techStack = [
     { name: 'Python',       Icon: SiPython,       color: '#3776AB', proficiency: 90 },
-    { name: 'Javascript',   Icon: SiJavascript,   color: '#F7DF1E', proficiency: 85 },                         
+    { name: 'JavaScript',   Icon: SiJavascript,   color: '#F7DF1E', proficiency: 85 },
     { name: 'ARM Assembly', Icon: SiArm,          color: '#DD0031', proficiency: 70 },
     { name: 'C++',          Icon: SiCplusplus,    color: '#00599C', proficiency: 80 },
     { name: 'Tailwind CSS', Icon: SiTailwindcss,  color: '#06B6D4', proficiency: 85 },
@@ -70,6 +71,8 @@ export default function AboutMe() {
           <div>
             <h3 className={styles.listHeading}>Hobbies &amp; Interests</h3>
             <Hobbies hobbies={hobbiesList} />
+            {/* ← Certifications added right below hobbies */}
+            <Certifications />
           </div>
         </div>
       </motion.div>

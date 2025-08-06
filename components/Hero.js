@@ -39,10 +39,9 @@ export default function Hero() {
           CS Student · Cybersecurity Enthusiast · Full-Stack Developer
         </motion.p>
 
-        {/* CTA group with two buttons */}
         <div className={styles.ctaGroup}>
           <motion.a
-            href="/projects"
+            href="#projects"
             className={styles.cta}
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}

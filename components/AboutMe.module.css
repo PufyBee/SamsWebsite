@@ -1,4 +1,5 @@
 /* components/AboutMe.module.css */
+
 .container {
   display: flex;
   justify-content: center;
@@ -7,11 +8,22 @@
 
 .card {
   max-width: 600px;
-  background: #fff;
+  background: var(--card-bg);
+  color: var(--card-fg);
   padding: 2rem;
   border-radius: 1rem;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 20px var(--card-shadow);
   text-align: center;
+  transition: 
+    background 0.3s,
+    color 0.3s,
+    box-shadow 0.3s,
+    transform 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 12px 30px rgba(0, 112, 243, 0.3);
+  transform: scale(1.01);
 }
 
 .heading {
@@ -22,7 +34,7 @@
 
 .bio {
   font-size: 1rem;
-  color: #444;
+  color: var(--card-fg);
   line-height: 1.5;
   margin-bottom: 1.5rem;
 }
@@ -33,7 +45,7 @@
 
 .button {
   display: inline-block;
-  background-color: #0070f3;
+  background-color: var(--link);
   color: #fff;
   padding: 0.6rem 1.2rem;
   border-radius: 9999px;
@@ -55,9 +67,10 @@
 }
 
 .links a {
-  color: #0070f3;
+  color: var(--link);
   font-weight: 500;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
 .lists {
@@ -89,21 +102,12 @@
 
 .hobbyList li::before {
   content: '•';
-  color: #0070f3;
-  display: inline-block; 
+  color: var(--link);
+  display: inline-block;
   width: 1em;
   margin-left: -1em;
 }
 
-.card {
-  /* ensure transform & shadow transitions are smooth */
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-/* glow on hover to match Projects */
-.card:hover {
-  box-shadow: 0 12px 30px rgba(0, 112, 243, 0.3);
-}
 .certSection {
   margin-top: 2rem;
   text-align: center;

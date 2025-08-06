@@ -9,17 +9,17 @@
 
 .card {
   position: relative;
-  background-color: #fff;
+  background-color: var(--card-bg);
+  color: var(--card-fg);
   padding: 4rem 2rem 2rem;   /* extra top padding for avatar */
   border-radius: 1rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px var(--card-shadow);
   text-align: center;
   max-width: 400px;
   width: 100%;
-  transition: box-shadow 0.2s ease, transform 0.2s ease;  /* add this */
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.2s ease;
 }
 
-/* glow on hover */
 .card:hover {
   box-shadow: 0 12px 30px rgba(0, 112, 243, 0.3);
 }
@@ -46,7 +46,7 @@
 
 .subtitle {
   margin-top: 0.5rem;
-  color: #555;
+  color: var(--card-fg);
 }
 
 .ctaGroup {
@@ -58,7 +58,7 @@
 
 .cta {
   display: inline-block;
-  background-color: #0070f3;
+  background-color: var(--link);
   color: #fff;
   padding: 0.75rem 1.5rem;
   border-radius: 9999px;

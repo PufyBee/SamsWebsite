@@ -7,13 +7,13 @@
 }
 
 .card {
-  background: #fff;
+  background-color: var(--card-bg);
+  color: var(--card-fg);
   padding: 1.5rem;
   border-radius: 1rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 20px var(--card-shadow);
   text-decoration: none;
-  color: inherit;
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.2s ease;
 }
 
 .card:hover {

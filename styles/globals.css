@@ -1,33 +1,41 @@
+/* styles/globals.css */
+
+/* 1) Base font & reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, sans-serif;
+}
+
+/* 2) Color variables */
 :root {
-  /* Light mode colors */
-  --bg: #f0f2f5;
+  /* Light mode */
+  --bg: #f4f4f4;
   --fg: #111;
   --card-bg: #fff;
+  --card-fg: #111;
   --link: #0070f3;
   --card-shadow: rgba(0, 0, 0, 0.1);
 }
 
 [data-theme='dark'] {
-  /* Dark mode overrides */
-  --bg: #1a1a1a;
+  /* Dark mode */
+  --bg: #121212;
   --fg: #eee;
-  --card-bg: #2a2a2a;
+  --card-bg: #1f1f1f;
+  --card-fg: #eee;
   --link: #4ea8de;
   --card-shadow: rgba(0, 0, 0, 0.5);
 }
 
+/* 3) Apply globals */
 body {
   background: var(--bg);
   color: var(--fg);
   transition: background 0.3s, color 0.3s;
 }
 
-.card {
-  background: var(--card-bg);
-  box-shadow: 0 10px 25px var(--card-shadow);
-  transition: background 0.3s, box-shadow 0.3s;
-}
-
 a {
   color: var(--link);
+  transition: color 0.3s;
 }

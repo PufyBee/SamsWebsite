@@ -22,6 +22,14 @@ const projects = [
     comingSoon: false,
   },
   {
+    title: 'Security Jeopardy Quiz',
+    description:
+      'Interactive cybersecurity quiz game with category-based questions and timed scoring.',
+    url: 'https://security-jeopardy.vercel.app/',
+    thumb: '/images/jeopardy-thumb.png',  // ← put your screenshot here
+    comingSoon: false,
+  },
+  {
     title: `Grandfather's Campaign Site`,
     description: 'A simple “Coming Soon” campaign site for my grandfather.',
     url: '#',

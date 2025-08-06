@@ -71,9 +71,13 @@ export default function AboutMe() {
           <div>
             <h3 className={styles.listHeading}>Hobbies &amp; Interests</h3>
             <Hobbies hobbies={hobbiesList} />
-            {/* ← Certifications added right below hobbies */}
-            <Certifications />
           </div>
+        </div>
+
+        {/* NEW: Certifications Section */}
+        <div className={styles.certSection}>
+          <h3 className={styles.listHeading}>Certifications</h3>
+          <Certifications />
         </div>
       </motion.div>
     </section>

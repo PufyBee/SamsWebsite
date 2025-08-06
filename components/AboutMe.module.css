@@ -104,3 +104,7 @@
 .card:hover {
   box-shadow: 0 12px 30px rgba(0, 112, 243, 0.3);
 }
+.certSection {
+  margin-top: 2rem;
+  text-align: center;
+}

@@ -7,26 +7,24 @@
 }
 
 .card {
-  background-color: #fff;
-  border-radius: 1rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  padding: 3.5rem 2.5rem 2rem;       /* a touch more horizontal padding */
-  max-width: 400px;           /* increased from ~350px */
-  text-align: center;
+  position: relative;
+  /* bump top padding to accommodate the avatar */
+  padding: 80px 2.5rem 2rem;
+  /* …other styles… */
 }
 
 .avatar {
   position: absolute;
-  top: -60px;                     /* pull it up above the card */
+  top: 0;                     /* anchor to the very top of the card */
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%); /* pull it up exactly half its height */
   width: 120px;
   height: 120px;
-  border: 4px solid #fff;         /* crisp white ring */
+  border: 4px solid #fff;
   border-radius: 50%;
   overflow: hidden;
-  box-shadow: 0 0 0 4px rgba(0,0,0,0.05);
   background: #fff;
+  box-shadow: 0 0 0 4px rgba(0,0,0,0.05);
 }
 
 .title {

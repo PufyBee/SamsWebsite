@@ -47,9 +47,7 @@ export default function Projects() {
           <motion.a
             key={p.title}
             href={p.url}
-            className={`${styles.card} ${
-              p.comingSoon ? styles.soon : ''
-            }`}
+            className={`${styles.card} ${p.comingSoon ? styles.soon : ''}`}
             target={p.comingSoon ? '_self' : '_blank'}
             rel={p.comingSoon ? undefined : 'noopener noreferrer'}
             initial={{ opacity: 0, y: 20 }}
@@ -59,14 +57,15 @@ export default function Projects() {
             whileHover={{ scale: 1.03 }}
           >
             <div className={styles.thumb}>
-              <Image
-                src={p.thumb}
-                alt={p.title}
-                width={320}
-                height={180}
-                style={{ objectFit: 'cover' }}
-                priority={idx === 0}
-              />
+              <div className={styles.imageWrapper}>
+                <Image
+                  src={p.thumb}
+                  alt={p.title}
+                  layout="fill"
+                  objectFit="cover"
+                  priority={idx === 0}
+                />
+              </div>
               {p.comingSoon && (
                 <span className={styles.badge}>Coming Soon</span>
               )}

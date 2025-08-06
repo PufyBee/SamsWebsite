@@ -22,7 +22,7 @@ const projects = [
     title: `Grandfather's Campaign Site`,
     description: 'A simple “Coming Soon” campaign site for my grandfather.',
     url: '#',
-    thumb: 'https://via.placeholder.com/320x180?text=Campaign+Site',
+    thumb: '/images/placeholder-campaign.png',
     comingSoon: true,
   },
   {
@@ -30,7 +30,7 @@ const projects = [
     description:
       'Network intrusion detection & logging dashboard (coming soon).',
     url: '#',
-    thumb: 'https://via.placeholder.com/320x180?text=CyberMonitor',
+    thumb: '/images/placeholder-cyber.png',
     comingSoon: true,
   },
 ];
@@ -40,7 +40,7 @@ export default function Projects() {
     <>
       <Navbar />
       <main className={styles.grid}>
-        {projects.map((p) => (
+        {projects.map((p, idx) => (
           <a
             key={p.title}
             href={p.url}
@@ -49,13 +49,15 @@ export default function Projects() {
             rel={p.comingSoon ? undefined : 'noopener noreferrer'}
           >
             <div className={styles.thumb}>
-              <Image
-                src={p.thumb}
-                width={320}
-                height={180}
-                alt={p.title}
-                className={styles.image}
-              />
+              <div className={styles.imageWrapper}>
+                <Image
+                  src={p.thumb}
+                  alt={p.title}
+                  fill
+                  style={{ objectFit: 'contain', objectPosition: 'center' }}
+                  priority={idx === 0}
+                />
+              </div>
               {p.comingSoon && <span className={styles.badge}>Coming Soon</span>}
             </div>
             <h2>{p.title}</h2>

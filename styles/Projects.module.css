@@ -23,13 +23,15 @@
 .thumb {
   position: relative;
   width: 100%;
-  height: 0;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 180px;      /* fixed height for thumbnails */
+  background: #f0f0f0; /* grey behind images */
   overflow: hidden;
 }
 
-.image {
-  object-fit: cover;
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .badge {

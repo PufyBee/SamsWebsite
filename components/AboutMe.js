@@ -45,7 +45,7 @@ export default function AboutMe() {
         <h2 className={styles.heading}>About Me</h2>
 
         <p className={styles.bio}>
-          Hi, I'm Sam Harrison, a computer science student passionate about coding with a deep focus on Python and Cybersecurity. I thoroughly enjoy uncovering and adressing vulnerabilities to create more secure systems. Outside of tech, I love walking, playing tennis, lifting weights, and watching wildlife. 
+          Hi, I'm Sam Harrison, a computer science student passionate about coding with a deep focus on Python and cybersecurity. I thoroughly enjoy uncovering and addressing vulnerabilities to create more secure systems. Outside of tech, I love walking, playing tennis, lifting weights, and watching wildlife. 
         </p>
 
         <div className={styles.buttons}>

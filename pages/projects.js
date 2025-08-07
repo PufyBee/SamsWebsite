@@ -29,13 +29,13 @@ const projects = [
     thumb: '/images/jeopardy-thumb.png',  // ← put your screenshot here
     comingSoon: false,
   },
-  {
-    title: `Grandfather's Campaign Site`,
-    description: 'A simple “Coming Soon” campaign site for my grandfather.',
-    url: '#',
-    thumb: '/images/campaign-poster.png',
-    comingSoon: true,
-  },
+  //{
+   // title: `Grandfather's Campaign Site`,
+   // description: 'A simple “Coming Soon” campaign site for my grandfather.',
+    //url: '#',
+    //thumb: '/images/campaign-poster.png',
+    //comingSoon: true,
+ // },
   {
     title: 'CyberMonitor (Placeholder)',
     description:

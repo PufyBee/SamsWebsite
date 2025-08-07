@@ -33,7 +33,7 @@ const projects = [
     title: `Grandfather's Campaign Site`,
     description: 'A simple “Coming Soon” campaign site for my grandfather.',
     url: '#',
-    thumb: '/images/placeholder-campaign.png',
+    thumb: '/images/campaign-poster.png',
     comingSoon: true,
   },
   {

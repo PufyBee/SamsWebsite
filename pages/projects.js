@@ -44,6 +44,14 @@ const projects = [
     thumb: '/images/placeholder-cyber.png',
     comingSoon: true,
   },
+  {
+  title: 'Phishing Mini Game',
+  description:
+    'Spot-the-phish: classify emails as legit or phish with instant explanations.',
+  url: '#', // replace with your live link when ready
+  thumb: '/images/phishing-thumb.png',
+  comingSoon: true, // keep true to dim/disable until live
+},
 ];
 
 export default function Projects() {

@@ -30,20 +30,20 @@ const projects = [
     comingSoon: false,
   },
   {
-    title: 'CyberMonitor (Placeholder)',
-    description:
-      'Network intrusion detection & logging dashboard (coming soon).',
-    url: '#',
-    thumb: '/images/placeholder-cyber.png',
-    comingSoon: true,
-  },
-  {
   title: 'Phishing Mini Game',
   description:
     'Spot-the-phish: classify emails as legit or phish with instant explanations.',
   url: 'https://phishing-mini-game-frontend.vercel.app/', // replace with your live link when ready
   thumb: '/images/phishing-thumb.png',
   comingSoon: false, // keep true to dim/disable until live
+},
+{
+  title: 'CyberMonitor (Placeholder)',
+  description:
+   'Network intrusion detection & logging dashboard (coming soon).',
+  url: '#',
+  thumb: '/images/placeholder-cyber.png',
+  comingSoon: true,
 },
 ];
 

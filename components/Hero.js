@@ -1,5 +1,6 @@
 // components/Hero.js
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Hero.module.css';
 
@@ -41,19 +42,18 @@ export default function Hero() {
         </motion.p>
 
         <div className={styles.ctaGroup}>
-          <motion.a
-            href="https://phishing-mini-game-frontend.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.cta}
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ delay: 1.2, duration: 0.4 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Play Phishing Mini Game
-          </motion.a>
+          <Link href="/projects" passHref>
+            <motion.a
+              className={styles.cta}
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ delay: 1.2, duration: 0.4 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              View My Projects
+            </motion.a>
+          </Link>
         </div>
       </motion.div>
     </section>

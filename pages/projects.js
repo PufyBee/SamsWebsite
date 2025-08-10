@@ -50,7 +50,7 @@ const projects = [
     'Spot-the-phish: classify emails as legit or phish with instant explanations.',
   url: 'https://phishing-mini-game-frontend.vercel.app/', // replace with your live link when ready
   thumb: '/images/phishing-thumb.png',
-  comingSoon: true, // keep true to dim/disable until live
+  comingSoon: false, // keep true to dim/disable until live
 },
 ];
 

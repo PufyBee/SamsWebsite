@@ -30,13 +30,6 @@ const projects = [
     comingSoon: false,
   },
   {
-    title: `Grandfather's Campaign Site`,
-    description: 'A simple “Coming Soon” campaign site for my grandfather.',
-    url: '#',
-    thumb: '/images/campaign-poster.png',
-    comingSoon: true,
-  },
-  {
     title: 'CyberMonitor (Placeholder)',
     description:
       'Network intrusion detection & logging dashboard (coming soon).',

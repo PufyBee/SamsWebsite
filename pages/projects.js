@@ -29,13 +29,13 @@ const projects = [
     thumb: '/images/jeopardy-thumb.png',  // ← put your screenshot here
     comingSoon: false,
   },
-  //{
-   // title: `Grandfather's Campaign Site`,
-   // description: 'A simple “Coming Soon” campaign site for my grandfather.',
-    //url: '#',
-    //thumb: '/images/campaign-poster.png',
-    //comingSoon: true,
- // },
+  {
+    title: `Grandfather's Campaign Site`,
+    description: 'A simple “Coming Soon” campaign site for my grandfather.',
+    url: '#',
+    thumb: '/images/campaign-poster.png',
+    comingSoon: true,
+  },
   {
     title: 'CyberMonitor (Placeholder)',
     description:
@@ -48,7 +48,7 @@ const projects = [
   title: 'Phishing Mini Game',
   description:
     'Spot-the-phish: classify emails as legit or phish with instant explanations.',
-  url: '#', // replace with your live link when ready
+  url: 'https://phishing-mini-game-frontend.vercel.app/', // replace with your live link when ready
   thumb: '/images/phishing-thumb.png',
   comingSoon: true, // keep true to dim/disable until live
 },

@@ -1,13 +1,21 @@
 /* components/Certifications.module.css */
-
 .container {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-  color: var(--card-fg);    /* ← was fixed #333 */
+  gap: .35rem;
+  color: var(--card-fg);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .95rem;
+}
+
+.icon {
+  color: #22c55e; /* pleasant green check */
 }
 
 .text {

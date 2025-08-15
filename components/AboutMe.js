@@ -32,6 +32,11 @@ export default function AboutMe() {
     { name: 'Video games',    Icon: FaGamepad },
   ];
 
+  const certs = [
+    { text: 'CompTIA Security+ (SY0-701) — Passed May 2025' },
+    { text: 'Google Cybersecurity — Passed August 2025' },
+  ];
+
   return (
     <section className={styles.container} id="about">
       <motion.div
@@ -44,8 +49,13 @@ export default function AboutMe() {
       >
         <h2 className={styles.heading}>About Me</h2>
 
+        {/* Certifications at the top */}
+        <div className={styles.certSection}>
+          <Certifications certs={certs} />
+        </div>
+
         <p className={styles.bio}>
-          Hi, I'm Sam Harrison, a computer science student passionate about coding with a deep focus on Python and cybersecurity. I thoroughly enjoy uncovering and addressing vulnerabilities to create more secure systems. Outside of tech, I love walking, playing tennis, lifting weights, and watching wildlife. 
+          Hi, I’m Sam Harrison—a computer science student passionate about coding, with a focus on Python and cybersecurity. I love uncovering and addressing vulnerabilities to build more secure systems. Outside of tech, I enjoy walking, playing tennis, lifting weights, and exploring nature.
         </p>
 
         <div className={styles.buttons}>
@@ -72,12 +82,6 @@ export default function AboutMe() {
             <h3 className={styles.listHeading}>Hobbies &amp; Interests</h3>
             <Hobbies hobbies={hobbiesList} />
           </div>
-        </div>
-
-        {/* NEW: Certifications Section */}
-        <div className={styles.certSection}>
-          <h3 className={styles.listHeading}>Certifications</h3>
-          <Certifications />
         </div>
       </motion.div>
     </section>

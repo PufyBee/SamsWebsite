@@ -2,14 +2,15 @@
 import { MdVerified } from 'react-icons/md';
 import styles from './Certifications.module.css';
 
-export default function Certifications() {
+export default function Certifications({ certs = [] }) {
   return (
     <div className={styles.container}>
-      <MdVerified size={24} color="#28a745" />
-      <span className={styles.text}>
-        CompTIA Security+ (SY0-701) — Passed May 2025
-        Google Cybersecurity - Passed August 2025
-      </span>
+      {certs.map((c) => (
+        <div key={c.text} className={styles.item}>
+          <MdVerified size={20} className={styles.icon} />
+          <span className={styles.text}>{c.text}</span>
+        </div>
+      ))}
     </div>
   );
 }
